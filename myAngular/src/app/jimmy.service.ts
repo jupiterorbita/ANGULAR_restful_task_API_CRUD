@@ -13,6 +13,6 @@ export class JimmyService {
 
   getTasks() {
     const tempObservable = this._http.get('/tasks');
-    tempObservable.subscribe(data => console.log('got tasks by JIMMY!', data));
+    tempObservable.subscribe(data => console.log('got tasks by JIMMY.service.ts!', data));
   }
 }
