@@ -8,23 +8,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit { // 0
-  tasks = []; // 1
+// export class AppComponent implements OnInit { // 0
+export class AppComponent {
+  tasks = null;
+  task_arr = null; // 1
     // title = 'MEAN STACK';
   constructor(
     private _bobbyService: BobbyService, // 2
     private _jimmyService: JimmyService // 3
   ) { }
 
-  ngOnInit() { // 4
-    this.getTasksFromService(); // 5
+  // ngOnInit() { // 4
+  //   this.getTasksFromService(); // 5
+  // }
+
+  onButtonClickBOB() {
+    this.getTasksFromService();
   }
+
+  onButShowDesc(task): void {
+    console.log('clicked event show desc', task);
+    this.tasks = task;
+  }
+
 
   getTasksFromService() { // 6
     const observable = this._bobbyService.getTasks(); // 7, 10
     observable.subscribe( server_response => { // 11
-      console.log('got our tasks (bobby) app.component.ts =>!', server_response); // 12
-      this.tasks = server_response['data']; // 13
+      console.log('got our task_arr (bobby) app.component.ts =>!', server_response); // 12
+      this.task_arr = server_response['data']; // 13
     });
   }
 
