@@ -4,25 +4,61 @@
 }
 
 .headerArea{
+    margin-top: 10px;
     border: 2px solid blue;
-    width: 1000px;
-    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    min-height: 100px;
     align-content: center;
     margin: auto;
+    margin-bottom: 10px;
+    display: block
   }
   .tasks{
+    margin-top: 10px;
     border: 2px solid red;
-    width: 1000px;
-    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    min-height: 200px;
     align-content: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top
+  }
+  div.center{
     margin: auto;
+    width: 800px;
+  }
+  .update{
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 2px solid rgb(0, 255, 21);
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    min-height: 200px;
+    align-content: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top
+  }
+  .red{
+    color:red;
   }
   .show{
-    border: 2px solid yellowgreen;
-    width: 1000px;
+    margin-top: 10px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
     height: 100px;
     align-content: center;
     margin: auto;
+    display: block;
   }
   /* #showTasks{
     align-content: center;
